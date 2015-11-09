@@ -12,8 +12,8 @@ import gui.controller.GUIAppController;
  */
 public class GUIFrame extends JFrame
 {
-	
 	private GUIAppController baseController;
+	private GUIPanel basePanel;
 	
 	public GUIFrame(GUIAppController baseController)
 	{
@@ -22,6 +22,9 @@ public class GUIFrame extends JFrame
 		setupFrame();
 	}
 	
+	/*
+	 * Helper method to setup the Frame and its structure.
+	 */
 	private void setupFrame()
 	
 	{
