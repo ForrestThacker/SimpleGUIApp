@@ -5,6 +5,9 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.SpringLayout;
 import gui.controller.GUIAppController;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
 
 /**
  * @author ftha4681
@@ -22,13 +25,12 @@ public class GUIPanel extends JPanel
 	{
 		this.baseController = baseController;
 		baseLayout = new SpringLayout();
-		firstButton = new JButton("Do not click the the button pls");
+		firstButton = new JButton("Do not click the button pls");
 		firstTextField = new JTextField("You can put words in this box");
-		
+	
 		setupPanel();
 		setupLayout();
-		setupListeners();
-		
+		setupListeners();	
 	}
 	
 	/**
@@ -42,13 +44,26 @@ public class GUIPanel extends JPanel
 		this.add(firstTextField);
 	}
 	
+	/**
+	 * Helper method to hold ugly GUI layout code.
+	 */
+	
 	private void setupLayout()
-	{
-		
+	{   baseLayout.putConstraint(SpringLayout.NORTH, firstTextField, 65, SpringLayout.SOUTH, firstButton);
+		baseLayout.putConstraint(SpringLayout.WEST, firstTextField, 0, SpringLayout.WEST, firstButton);
+		baseLayout.putConstraint(SpringLayout.EAST, firstTextField, 320, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.WEST, firstButton, 117, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, firstButton, -181, SpringLayout.SOUTH, this);
 	}
 	
 	private void setupListeners()
 	{
-		
+		firstButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				firstTextField.setText("Pls no click it");
+			}
+		});
 	}
 }
