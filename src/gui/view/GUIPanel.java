@@ -12,7 +12,7 @@ import java.awt.Color;
 import javax.swing.UIManager;
 import java.awt.Font;
 import javax.swing.JRadioButton;
-
+import javax.swing.*;
 
 /**
  * @author ftha4681
@@ -41,11 +41,15 @@ public class GUIPanel extends JPanel
 		firstTextField.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		baseLayout.putConstraint(SpringLayout.NORTH, firstTextField, 24, SpringLayout.NORTH, this);
 		baseLayout.putConstraint(SpringLayout.WEST, firstTextField, 127, SpringLayout.WEST, this);
-		baseLayout.putConstraint(SpringLayout.EAST, firstTextField, 0, SpringLayout.EAST, firstButton);
+		baseLayout.putConstraint(SpringLayout.EAST, firstTextField, 0, SpringLayout.EAST, firstButton);	
+	}
 	
-		setupPanel();
-		setupLayout();
-		setupListeners();	
+	{
+	setupPanel();
+	
+	setupLayout();
+	
+	setupListeners();
 	}
 	
 	/**
@@ -81,6 +85,7 @@ public class GUIPanel extends JPanel
 	private void setupListeners()
 	{
 		firstButton.addActionListener(new ActionListener()
+
 		{
 			public void actionPerformed(ActionEvent click)
 			{
@@ -88,4 +93,9 @@ public class GUIPanel extends JPanel
 			}
 		});
 	}
+	
+	this.addMouseListener(new MouseListener()
+	{
+		
+	});
 }
