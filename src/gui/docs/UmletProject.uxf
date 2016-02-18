@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1660</x>
+      <y>470</y>
+      <w>140</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1670</x>
+      <y>510</y>
+      <w>130</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>880</x>
+      <y>50</y>
+      <w>580</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>Model
+--
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1540</x>
+      <y>110</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+Package::FatClass
+{Some Properties}
+--
+-id: Long
+_-ClassAttribute: Long_
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>330</y>
+      <w>410</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Ctec.controller::TwoDRunner
+--
+
+--
++ main(String [] args) : static void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>170</x>
+      <y>40</y>
+      <w>640</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>Controller
+--
+fg=blue
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>90</y>
+      <w>560</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Ctec.controller:NyTwoDController
+--
+- baseFrame : TwoDFrame
+--
++ start() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>530</x>
+      <y>530</y>
+      <w>650</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>View
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>560</y>
+      <w>590</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Ctec.view:: TwoDFrame
+
+--
+- baseController ; MyTwoDController
+--
++ TwoDFrame(MyTwoDController) : constructor
+- setupFrame() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>740</y>
+      <w>330</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Ctec.model:
+--
+- baseController : MyTwoDController
+- addButton : JButton
+- baseLayout : SpringLayout
+--
++ TwoDPanel(MyTwoDController baseController) : constructor
+- setupPanel() : void
+- setupLayout() : void
+- setupListerners() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>150</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Ctec.model: Fruit
+--
+- COlor : java.awt.Color
+- capacity : int
+--
++ get/set :Type/void</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
